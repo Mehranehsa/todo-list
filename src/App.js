@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 function TodoList() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -12,8 +13,13 @@ function TodoList() {
 
   return (
     
-    <div className="flex items-center justify-center h-screen">
+
+    
+    <div className="flex items-center justify-center h-screen bg-purple-200">
       <div className="w-full max-w-xs">
+        <header style={{backgroundColor: "#6f42c1"}} className="text-white text-center py-2 mb-4 rounded-t-lg">
+          <h1 className="text-xl font-bold">Todo List</h1>
+        </header>
         <div className="bg-white rounded-lg border border-gray-400 shadow-lg p-4 mb-4 flex items-center">
           <input
             type="text"
@@ -38,6 +44,7 @@ function TodoList() {
         </ul>
       </div>
     </div>
+    
   );
 }
 
